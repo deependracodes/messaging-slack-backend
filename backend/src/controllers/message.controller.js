@@ -43,16 +43,15 @@ export const getPresignedUrlFromAWS = async (req, res) => {
       Expires: 60 // 1 minute
     });
     return res
-          .status(StatusCodes.OK)
-          .json(successResponse(url, 'Presigned URL generated successfully'));
-          
+      .status(StatusCodes.OK)
+      .json(successResponse(url, 'Presigned URL generated successfully'));
   } catch (err) {
     console.log('Error in getPresignedUrlFromAWS', err);
-    if(err.statusCode) {
+    if (err.statusCode) {
       return res.status(err.statusCode).json(customErrorResponse(err));
     }
     return res
       .status(StatusCodes.INTERNAL_SERVER_ERROR)
       .json(internalErrorResponse(err));
   }
-}
+};

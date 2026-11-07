@@ -12,14 +12,12 @@ import {
   resetJoinCodeController,
   updateWorkspaceController
 } from '../../../controllers/workspace.controller.js';
-
 import { auth } from '../../../middlewares/auth.middleware.js';
 import {
   addChannelToWorkspaceSchema,
   addMemberToWorkspaceSchema,
   createWorkspaceSchema
 } from '../../../validators/workspace.schema.js';
-
 import { validate } from '../../../validators/zod.validator.js';
 
 const workspaceRouter = express.Router();
@@ -37,11 +35,7 @@ workspaceRouter.delete('/:workspaceId', auth, deleteWorkspaceController);
 
 workspaceRouter.get('/:workspaceId', auth, getWorkspaceController);
 
-workspaceRouter.get(
-  '/join/:joinCode',
-  auth,
-  getWorkspaceByJoinCodeController
-);
+workspaceRouter.get('/join/:joinCode', auth, getWorkspaceByJoinCodeController);
 
 workspaceRouter.put('/:workspaceId/join', auth, joinWorkspaceController);
 

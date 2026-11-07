@@ -1,7 +1,7 @@
 import express from 'express';
 
 import { getChannelByIdController } from '../../../controllers/channel.controller.js';
-import { auth } from '../../../middlewares/auth.middleware.js'
+import { auth } from '../../../middlewares/auth.middleware.js';
 
 const channelRouter = express.Router();
 
