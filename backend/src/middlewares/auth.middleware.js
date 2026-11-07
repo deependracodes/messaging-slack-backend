@@ -2,7 +2,7 @@ import { StatusCodes } from 'http-status-codes';
 import jwt from 'jsonwebtoken';
 
 import { JWT_SECRET } from '../config/server.config.js';
-import userRepository from '../repositoies/user.repository.js';
+import userRepository from '../repositories/user.repository.js';
 import {
   customErrorResponse,
   internalErrorResponse

@@ -35,6 +35,7 @@
 - channel (group)
 - message
 
+```
 - users : [
   {
   "_id": "60d5ecb8b3b6c214c8f5e001",
@@ -144,3 +145,4 @@
   ]
   }
   ]
+```
