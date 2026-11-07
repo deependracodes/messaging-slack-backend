@@ -4,9 +4,9 @@ import { StatusCodes } from 'http-status-codes';
 import { ENABLE_EMAIL_VERIFICATION } from '../config/server.config.js';
 import { addEmailtoMailQueue } from '../producers/mailQueueProducer.js';
 import userRepository from '../repositoies/user.repository.js';
-import { createJWT } from '../utils/common/authUtils.js';
+import { createJWT } from '../utils/common/jwt.js';
 import { verifyEmailMail } from '../utils/common/mailObject.js';
-import ClientError from '../utils/errors/clientError.js';
+import ClientError from '../utils/errors/client.error.js';
 import ValidationError from '../utils/errors/validation.error.js';
 
 export const signUpService = async (data) => {
