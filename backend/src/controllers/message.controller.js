@@ -1,6 +1,6 @@
 import { StatusCodes } from 'http-status-codes';
 
-import { s3 } from '../config/awsConfig.js';
+import { s3 } from '../config/aws.config.js';
 import { AWS_BUCKET_NAME } from '../config/server.config.js';
 import { getMessagesService } from '../services/message.service.js';
 import {
