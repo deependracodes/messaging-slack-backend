@@ -5,7 +5,7 @@ import {
   customErrorResponse,
   internalErrorResponse,
   successResponse
-} from '../utils/common/responseObjects.js';
+} from '../utils/common/response.objects.js';
 
 export const signUp = async (req, res) => {
   try {

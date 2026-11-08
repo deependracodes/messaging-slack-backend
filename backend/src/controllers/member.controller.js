@@ -1,6 +1,6 @@
 import { StatusCodes } from 'http-status-codes';
 
-import { isMemberPartOfWorkspaceService } from '../services/workspace.service.js';
+import { isUserMemberOfWorkspace } from '../services/workspace.service.js';
 import {
   customErrorResponse,
   internalErrorResponse,
@@ -9,7 +9,7 @@ import {
 
 export const isMemberPartOfWorkspaceController = async function (req, res) {
   try {
-    const response = await isMemberPartOfWorkspaceService(
+    const response = await isUserMemberOfWorkspace(
       req.params.workspaceId,
       req.user
     );

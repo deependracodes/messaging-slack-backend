@@ -15,14 +15,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@bull-board/express": "^9.11.0",
     "aws-sdk": "^2.1693.0",
     "bcrypt": "^6.0.0",
+    "bull": "^4.16.5",
     "cors": "^2.8.6",
     "dotenv": "^18.0.9",
     "express": "^5.3.0",
     "http-status-codes": "^2.3.0",
+    "ioredis": "^6.0.0",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.12.0",
+    "nodemailer": "^10.4.0",
     "uuid": "^14.0.3",
     "zod": "^4.6.7"
   },

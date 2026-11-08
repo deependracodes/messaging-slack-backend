@@ -24,6 +24,7 @@ const workspaceSchema = new mongoose.Schema({
   ],
   joinCode: {
     type: String,
+    unique: true,
     required: [true, 'Join code is required']
   },
   channels: [

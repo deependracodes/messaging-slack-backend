@@ -2,10 +2,10 @@ import bcrypt from 'bcrypt';
 import { StatusCodes } from 'http-status-codes';
 
 import { ENABLE_EMAIL_VERIFICATION } from '../config/server.config.js';
-import { addEmailtoMailQueue } from '../producers/mailQueueProducer.js';
+import { addEmailtoMailQueue } from '../producers/mail.queue.producer.js';
 import userRepository from '../repositories/user.repository.js';
 import { createJWT } from '../utils/common/jwt.js';
-import { verifyEmailMail } from '../utils/common/mailObject.js';
+import { verifyEmailMail } from '../utils/common/mail.objects.js';
 import ClientError from '../utils/errors/client.error.js';
 import ValidationError from '../utils/errors/validation.error.js';
 
